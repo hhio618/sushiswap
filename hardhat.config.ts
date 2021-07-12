@@ -18,10 +18,8 @@ import "./tasks"
 import { HardhatUserConfig } from "hardhat/types"
 import { removeConsoleLog } from "hardhat-preprocessor"
 
-const accounts = {
-  mnemonic: process.env.MNEMONIC || "test test test test test test test test test test test junk",
-  // accountsBalance: "990000000000000000000",
-}
+
+const accounts = [process.env.PRIVATE_KEY1, process.env.PRIVATE_KEY2]
 
 const config: HardhatUserConfig = {
   abiExporter: {
@@ -77,7 +75,7 @@ const config: HardhatUserConfig = {
       tags: ["test", "local"],
     },
     ropsten: {
-      url: `https://ropsten.infura.io/v3/${process.env.INFURA_API_KEY}`,
+      url: `https://eth-rinkeby.alchemyapi.io/v2/_CtGlrs_xajiQaFx0ISFlQDc0kYvVFIG`,
       accounts,
       chainId: 3,
       live: true,
@@ -270,6 +268,13 @@ const config: HardhatUserConfig = {
       chainId: 42220,
       live: true,
       saveDeployments: true,
+    },
+    iotextestnet: {
+      url: "https://babel-api.testnet.iotex.io",
+      accounts,
+      chainId: 4690,
+      gas: 8500000,
+      gasPrice: 1000000000000
     },
   },
   paths: {
