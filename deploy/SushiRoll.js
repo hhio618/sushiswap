@@ -6,6 +6,7 @@ UNISWAP_ROUTER.set("5", "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D")
 UNISWAP_ROUTER.set("42", "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D")
 UNISWAP_ROUTER.set("1287", "0x2823caf546C7d09a4832bd1da14f2C6b6E665e05")
 UNISWAP_ROUTER.set("79377087078960", "0x0B72c0193CD598b536210299d358A5b720A262b8")
+UNISWAP_ROUTER.set("4690", "0x55ffec903264f037736c87ba78db639607908c15") // IoTeX testnet.
 
 module.exports = async function ({ getNamedAccounts, getChainId, deployments }) {
   const { deploy } = deployments
